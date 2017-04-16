@@ -16,6 +16,7 @@ class MenuController
     puts "3 - Search for an entry"
     puts "4 - Import entries from a CSV"
     puts "5 - Exit"
+    puts "6 - To start detonation"
     print "Enter your selection: "
 
     # #3
@@ -44,6 +45,11 @@ class MenuController
       # #8
       exit(0)
       # #9
+    when 6
+      system "clear"
+      @address_book.detonate
+      puts "Entries deleted!"
+      main_menu
     else
       system "clear"
       puts "Sorry, that is not a valid input"
